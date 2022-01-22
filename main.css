@@ -13,7 +13,7 @@ h6 {
 }
 
 :root {
-  --light: #fff;
+  --light: #fffff8;
   --dark: #0A070B;
   --darka:#121212;
   --grey:#4F4E50;
@@ -100,7 +100,7 @@ img {
 
 
 header {
-  width: clamp(13rem, 85vw, 80rem);
+  width: clamp(13rem, 80vw, 80rem);
   height: 6rem;
   display: flex;
   justify-content: space-between;
@@ -150,14 +150,14 @@ nav {
 .web3connect {
 
 } .cta {
-  padding: 0.9rem clamp(1.1rem, 8vw, 2.5rem);
+  padding: 0.75rem clamp(1.1rem, 8vw, 2.5rem);
   background-color: var(--c1);
   color: var(--dark);
   font-weight: 800;
   font-size: clamp(1rem, calc(8vw - 0.8rem), 1.1rem);
   border-radius: 0.2rem;
   text-align: center;
-  transition: background-color 0.4s ease, transform 2s ease;
+  transition: background-color 0.4s ease, transform 1s ease;
   position: relative;
   overflow: hidden;
   display: inline-block;
@@ -180,10 +180,10 @@ nav {
   transform: translate(62%, -50%);
 } .cta:hover {
   background-color: var(--c1a);
-  transition: background-color 0.05s ease;
+  transition: background-color 0.05s ease, transform 0.05s ease;
 } .cta:active {
-  transform:scale(0.95);
-  transition: transform 0.05s ease;
+  transform:scale(0.98);
+  transition: transform 0.05s ease, background-color 0.4s ease,;
 }
 
 
@@ -197,7 +197,7 @@ main {
 }
 
 .info_ctnr {
-  width: clamp(13rem, 85vw, 80rem);
+  width: clamp(13rem, 80vw, 80rem);
   margin:0 auto;
 }
 
@@ -205,15 +205,15 @@ main {
 .logo_slogan {
   display: block;
   width: 30rem;
-  width: clamp(13rem, 85vw, clamp(27rem, 70vw, 35rem));
+  width: clamp(13rem, 85vw, clamp(27rem, 55vw, 35rem));
   margin: 0 auto;
 }
 
 h1 {
   font-size: 2rem;
   display: block;
-  margin: 3rem auto 2rem auto;
-  font-size: clamp(1.7rem, 7.5vw, 2.5rem);
+  margin: 2.5rem auto 1.5rem auto;
+  font-size: clamp(1.6rem, 6.6vw, 2.5rem);
   font-weight: 100;
   text-align: center;
 } h1 strong {
@@ -232,19 +232,8 @@ h1 {
   flex-direction: row;
   gap: clamp(0.5rem, 3vw, 0.7rem);
   align-items: center;
-  padding: 0.8rem clamp(1rem, 4vw, 1.5rem);
   transition: background-color 0.3s ease;;
-} .learn_more:hover {
-  transition: background-color 0.05s ease;
-  background-color: rgba(255,255,255,0.03);
-
-} .learn_more div {
-  width: 0.4rem;
-  height: 0.4rem;
-  border-right: 0.1rem solid var(--light);
-  border-bottom: 0.1rem solid var(--light);
-  transform: translate(0rem, -0.1rem) rotate(45deg);
-
+  margin-bottom: -1.5rem;
 }
 
 .ppl_bg {
@@ -260,21 +249,33 @@ h1 {
 .section2 {
   background-color: var(--c1);
   width: 100%;
-  padding: 5rem 0;
+  padding: 3rem 0 0;
   color: var(--dark);
+  margin-bottom: -4rem;
 } .text_ctnr, .text_ctnr2 {
   width: clamp(13rem, 85vw, 80rem);
-  font-size: clamp(1.1rem, 4.6vw, 1.3rem);
+  font-size: clamp(1.1rem, 4.4vw, 1.3rem);
   line-height: clamp(1.6rem, 7.5vw, 2rem);
-  margin:0 auto;
+  margin: 0 auto;
+  text-align: justify;
+  hyphens: auto;
 } .text_ctnr > h2 {
   text-transform: uppercase;
   font-weight: 900;
-  font-size: clamp(2.3rem, 10vw, 2.5rem);
-  line-height: 2.8rem;
+  font-size: clamp(1.8rem, 9.2vw, 3.1rem);
+  line-height: clamp(2.2rem, 11vw, 3.5rem);
   color: var(--darka);
   display: block;
   margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-align: left;
+} .text_ctnr > h2 span {
+  background: var(--c1a);
+} .text_ctnr > h2 div {
+  display: inline-flex;
+  font-size: clamp(1.5rem, 2vw, 1.7rem);
+  transform: translateY(-8px);
+  letter-spacing: unset;
 } .text_ctnr p {
   font-weight: 400;
   margin: 0 0 1rem 0;
@@ -285,8 +286,10 @@ h1 {
 .chair_img {
   width: clamp(13rem, 70vw, 18rem);
   object-fit: contain;
-  margin: 6rem auto 0 auto;
+  margin: 4rem auto 0 auto;
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .bullets {
@@ -311,7 +314,7 @@ h1 {
   padding: 3rem clamp(1rem, 8vw, 3rem);
   box-sizing: border-box;
   border-radius: 0.6rem;
-  box-shadow: 0 0.1rem 0.5rem 0.2rem #b84, inset 0 0.3rem 0.6rem 0.1rem #641;
+  box-shadow: inset 0 0.1rem 0.9rem 0.2rem #554422;
   border: 1px solid #CA6;
 } .bullets h2 {
   text-transform: uppercase;
@@ -329,10 +332,11 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-top: 0.3rem;
-} .bullets h3 {
+} .bullets p {
   font-size: 1rem;
   line-height: 1.4rem;
   font-weight: 400;
+  color: #AFAFAF;
 } .bullets img {
   width: 3.2rem;
 } .bullets a {
@@ -346,6 +350,9 @@ h1 {
   width: 100%;
   text-transform: uppercase;
   letter-spacing: 2px;
+} .bullets b {
+  color: #DDD;
+  font-weight: inherit;
 }
 
 .section3 {
@@ -383,7 +390,7 @@ h1 {
   inset: 0;
   pointer-events: none;
   user-select: none;
-  opacity: 0.3;
+  opacity: 0.15;
   mix-blend-mode: lighten;
 }
 
@@ -394,7 +401,7 @@ h1 {
 } .soon_a:hover::after {
   opacity: 1;
   color:var(--c1);
-  transition: opacity 0.4s ease-in, color 1s 0.5s ease;
+  transition: opacity 0.4s ease, color 0.9s 0.4s ease;
 } .soon_a::after {
   content: 'SOON';
   position: absolute;
@@ -412,11 +419,14 @@ h1 {
   letter-spacing: 0.2rem;
   opacity: 0;
   color:transparent;
-  transition: opacity 0.4s 0.4s ease-out, color 0.4s ease;
-  background-color: rgba(0,0,0,0.3);
+  transition: opacity 0.4s 0.2s ease-out, color 0.3s ease;
+  background-color: rgba(0,0,0,0.2);
 }
 
-
+.lastcta {
+  margin: 4rem 0 0 0;
+  display: block;
+}
 
 
 
@@ -493,7 +503,7 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: start;
-    width: clamp(13rem, 85vw, 80rem);
+    width: clamp(13rem, 80vw, 80rem);
     margin: 0 auto;
     justify-content: space-between;
     z-index: 2;
@@ -513,6 +523,8 @@ h1 {
     background-position: right;
     background-size: auto 90%;
     background-attachment: fixed;
+    margin-bottom: unset;
+    padding: 5rem 0 4rem 0;
   }
 
   .chair_img {
@@ -521,6 +533,7 @@ h1 {
     display: block;
     margin: 0;
     width: clamp(13rem, 24vw, 22rem);
+    z-index: unset;
   }
 
   .bullets {
@@ -529,12 +542,12 @@ h1 {
     align-items: stretch;
   } .bullets > div {
     flex: 1;
-    min-width: 22rem;
-    max-width: 24rem;
+    min-width: 20rem;
+    max-width: 26rem;
     justify-content: space-between;
-    transition: background-color 0.4s ease;
+    transition: background-color 0.5s ease;
   } .bullets > div:hover {
-    transition: background-color 0.05s ease;
+    transition: background-color 0.07s ease;
     background-color: #1d1c1c;
   }.bullets h3 {
     font-size: 1rem;
