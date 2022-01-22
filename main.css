@@ -468,7 +468,7 @@ h1 {
 
   .chair_img {
     position: sticky;
-    top: 10rem;
+    top: 15vh;
     display: block;
     margin: 0;
     width: clamp(13rem, 24vw, 22rem);
@@ -513,7 +513,8 @@ h1 {
   .inefficiency {
     width: clamp(20rem, 40vw, 33rem);
     position: sticky;
-    top: calc(15rem - 10vw);
+    top: calc(35vh - 10vw);
+    filter: drop-shadow(0 0.3rem 0px var(--darka));
   }
   .text_ctnr2 p {
     font-size: clamp(1.1rem, 2vw, 1.2rem);
