@@ -290,20 +290,19 @@ h1 {
   margin: 3rem 0;
 } .bullets > div {
   border-radius: 0.2rem;
-  background-color: rgb(254 211 30 / 35%);
+  background-color: var(--darka);
   width: clamp(13rem, 85vw, 45rem);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  color: var(--dark);
+  color: var(--light);
   text-align: center;
   gap: 0.6rem;
   padding: 3rem clamp(1rem, 8vw, 3rem);
   box-sizing: border-box;
-  border-radius: 0.2rem;
-  backdrop-filter: blur(2px);
+  border-radius: 0.6rem;
 } .bullets h2 {
   text-transform: uppercase;
   line-height: 1.6rem;
@@ -311,12 +310,15 @@ h1 {
   letter-spacing: 2px;
   font-weight: 800;
 } .bullets h2 span {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: var(--c1);
   padding: 0 0.6rem;
-  border: 0.15rem solid var(--c1a);
-  line-height: 2.3rem;
+  line-height: 2rem;
   border-radius: 0.2rem;
-  box-shadow: 0 0.2rem 0.6rem -0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.3rem;
 } .bullets h3 {
   font-size: 1rem;
   line-height: 1.4rem;
@@ -324,14 +326,16 @@ h1 {
 } .bullets img {
   width: 3.2rem;
 } .bullets a {
-  border: 0.15rem solid var(--c1a);
+  border: 0.1rem solid var(--c1a);
   border-radius: 0.2rem;
-  font-size: 1.2rem;
-  font-weight: 800;
+  font-size: 1.1rem;
+  font-weight: 600;
   padding: 0.8rem 0;
   margin-top: 1rem;
   display: block;
   width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .section3 {
@@ -479,20 +483,20 @@ h1 {
     min-width: 20rem;
     justify-content: space-between;
     transition: background-color 0.4s ease;
-    backdrop-filter: unset;
   } .bullets > div:hover {
     transition: background-color 0.05s ease;
-    background-color: rgb(254 211 30 / 55%);
+    background-color: #1d1c1c;
   }.bullets h3 {
     font-size: 1rem;
     line-height: 1.4rem;
   } .bullets a {
     padding: 0.4rem 0;
-    font-size: 1.1rem;
-    transition: border-color 0.4s ease;
+    font-size: 1rem;
+    transition: border-color 0.4s ease, background-color 0.4s ease;
   } .bullets a:hover {
-    transition: border-color 0.05s ease;
-    border-color: rgba(255,255,255, 50%);
+    transition: border-color 0.05s ease, background-color 0.05s ease;
+    border-color: #333;
+    background-color: #1C1C1C;
   } 
 
   .megaphone {
