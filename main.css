@@ -1,0 +1,535 @@
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  cursor: default;
+}
+
+:root {
+  --light: #fff;
+  --dark: #0A070B;
+  --darka:#121212;
+  --grey:#4F4E50;
+  --c1:#F6B61A;
+  --c1a:#fed31e;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--dark);
+  color: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"),
+    url("assets/Gilroy-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"),
+    url("assets/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"),
+    url("assets/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"),
+    url("assets/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"),
+    url("assets/Gilroy-Heavy.ttf") format("truetype");
+  font-weight: 900;
+}
+
+body,
+button,
+input {
+  font-family: "Gilroy", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+b {
+  font-weight: 900;
+}
+
+img {
+  user-select: none;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c1);
+}
+
+
+/* END OF GLOBAL STYLES */
+
+
+header {
+  width: clamp(13rem, 85vw, 75rem);
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: clamp(0rem, calc(5vw - 2rem), 1rem);
+}
+
+nav {
+  position:fixed;
+  height:30rem;
+  background-color: var(--c1);
+  right:0;
+  left:0;
+  bottom:0;
+  transform:translateY(100%);
+}
+
+.header_logo img {
+  object-fit: contain;
+  width: 2.1rem;
+}
+
+.hambt {
+  width: 1.7rem;
+  height: 2.3rem;
+  border: 0.1rem solid var(--c1);
+  border-radius: 0.2rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+} .hambt div {
+  width:100%;
+  height:1.4rem;
+  border-top: 0.1rem solid var(--c1);
+  overflow: hidden;
+  position: relative;
+}  .hambt div div {
+  width:100%;
+  height:100%;
+  background-color: var(--c1);
+  transition: transform 0.15s ease;
+  transform:translateY(100%);
+}
+
+
+.web3connect {
+
+} .cta {
+  padding: 0.6rem clamp(1.1rem, 5vw, 2rem);
+  background-color: var(--c1);
+  color: var(--dark);
+  font-weight: 800;
+  font-size: clamp(1rem, calc(8vw - 0.8rem), 1.1rem);
+  border-radius: 0.2rem;
+  text-align: center;
+  transition: background-color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+} .cta::after, .cta::before {
+  content: '';
+  position: absolute;
+  width: clamp(1rem, 3vw, 1.1rem);
+  height: clamp(1rem, 3vw, 1.1rem);
+  border-radius: 10rem;
+  background-color: var(--dark);
+  top: 50%;
+} .cta::after {
+  left: 0;
+  transform: translate(-62%, -50%);
+} .cta::before {
+  right: 0;
+  transform: translate(62%, -50%);
+} .cta:hover {
+  background-color: var(--c1a);
+  transition: background-color 0.05s ease;
+}
+
+
+main {
+  padding-top: 2.5rem;
+}
+
+
+.introsec {
+  position: relative;
+}
+
+.info_ctnr {
+  width: clamp(13rem, 85vw, 75rem);
+  margin:0 auto;
+}
+
+
+.logo_slogan {
+  display: block;
+  width: 30rem;
+  width: clamp(13rem, 85vw, clamp(27rem, 70vw, 36rem));
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  display: block;
+  margin: 3rem auto 2rem auto;
+  font-size: clamp(1.7rem, 7.5vw, 2.5rem);
+  font-weight: 100;
+  text-align: center;
+} h1 strong {
+  font-weight: 600;
+  display: block;
+}
+
+.a_ctnr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.1rem;
+  gap: 1.5rem;
+} .learn_more {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(0.5rem, 3vw, 0.7rem);
+  align-items: center;
+  padding: 0.8rem clamp(1rem, 4vw, 1.5rem);
+  transition: background-color 0.3s ease;;
+} .learn_more:hover {
+  transition: background-color 0.05s ease;
+  background-color: rgba(255,255,255,0.03);
+
+} .learn_more div {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 0.1rem solid var(--light);
+  border-bottom: 0.1rem solid var(--light);
+  transform: translate(0rem, -0.1rem) rotate(45deg);
+
+}
+
+.ppl_bg {
+  background-image: url(assets/ppl.jpg);
+  width: 100%;
+  height: 30vh;
+  margin-top: 2.5rem;
+  background-size: cover;
+  background-position: center top;
+  mix-blend-mode: lighten;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.section2 {
+  background-color: var(--c1);
+  background-image: url(assets/logo_outline.png);
+  width: 100%;
+  padding: 5rem 0;
+  color: var(--dark);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 90%;
+  background-attachment: fixed;
+} .text_ctnr, .text_ctnr2 {
+  width: clamp(13rem, 85vw, 75rem);
+  font-size: clamp(1.1rem, 4.6vw, 1.3rem);
+  line-height: clamp(1.6rem, 7.5vw, 2rem);
+  margin:0 auto;
+} .text_ctnr p {
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+} .text_ctnr b {
+  font-weight: 600;
+}
+
+.chair_img {
+  width: clamp(13rem, 70vw, 18rem);
+  object-fit: contain;
+  margin: 2rem auto 0 auto;
+  display: block;
+}
+
+.bullets {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 3rem 0;
+} .bullets > div {
+  border-radius: 0.2rem;
+  background-color: rgb(254 211 30 / 35%);
+  width: clamp(13rem, 85vw, 45rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--dark);
+  text-align: center;
+  gap: 0.6rem;
+  padding: 3rem clamp(1rem, 8vw, 3rem);
+  box-sizing: border-box;
+  border-radius: 0.2rem;
+  backdrop-filter: blur(2px);
+} .bullets h2 {
+  text-transform: uppercase;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+} .bullets h2 span {
+  background: rgba(255,255,255,0.1);
+  padding: 0 0.6rem;
+  border: 0.15rem solid var(--c1a);
+  line-height: 2.3rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.2rem 0.6rem -0.4rem;
+} .bullets h3 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+} .bullets img {
+  width: 3.2rem;
+} .bullets a {
+  border: 0.15rem solid var(--c1a);
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 0.8rem 0;
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.section3 {
+  position: relative;
+  background-color:var(--darka);
+  padding: 5rem 0 0 0;
+}
+
+.inefficiency {
+  width: clamp(13rem, 85vw, 35rem);
+  margin: 0 auto 2.5rem auto;
+  display: block;
+}
+
+.text_ctnr2 {
+
+} .text_ctnr2 p {
+  margin: 0 0 1rem 0;
+  font-weight: 100;
+} .text_ctnr2 b {
+  font-weight: 400;
+}
+
+.megaphone {
+  width: 100%;
+  height: 19rem;
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-image: url(assets/megaphone.png);
+}
+
+.bgvideo {
+  position:fixed;
+  inset:0;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.015;
+  /* z-index: -1; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:800px) {
+
+  h1 {
+    text-align: left;
+  }
+
+  .logo_slogan {
+    margin: unset;
+  }
+
+  .a_ctnr {
+    flex-direction: row;
+    gap: unset;
+  }
+
+  .hambt {
+    display: none;
+  }
+
+  header nav {
+    position:relative;
+    background-color: unset;
+    height: unset;
+    transform: unset;
+    display: flex;
+  } header nav a {
+    padding: 1rem clamp(1rem, 2vw, 1.8rem);
+    background-color: transparent;
+    transition: background-color 0.4s ease;
+  } header nav a:hover {
+    transition: background-color 0.05s ease;
+    background-color: rgba(255,255,255,0.03);
+  }
+
+  .ppl_bg {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    height: unset;
+    left: unset;
+    right: 0;
+    background-size: contain;
+    background-position: center bottom;
+    width: clamp(27rem, calc(90vw - 28rem), 52rem);
+    margin-top: unset;
+  }
+
+  .introsec {
+    padding-bottom: clamp(7rem, calc(15vw - 6rem), 9rem);
+    padding-top: 2rem;
+  }
+
+  header {
+    justify-content: unset;
+    gap: clamp(2rem, 6vw, 8rem);
+  } .web3connect {
+    margin: 0 0 0 auto;
+  }
+
+  .content_ctnr {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: clamp(13rem, 85vw, 75rem);
+    margin: 0 auto;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+    gap: 3rem;
+  } .text_ctnr {
+    margin: unset;
+    font-size: clamp(1.15rem, 1.5vw, 1.25rem);
+    line-height: clamp(1.8rem, 3vw, 2.1rem);
+    flex: 1;
+    width: clamp(13rem, 50vw, 75rem);
+  }
+
+  .chair_img {
+    position: sticky;
+    top: 10rem;
+    display: block;
+    margin: 0;
+    width: clamp(13rem, 24vw, 22rem);
+  }
+
+  .bullets {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  } .bullets > div {
+    flex: 1;
+    min-width: 20rem;
+    justify-content: space-between;
+    transition: background-color 0.4s ease;
+    backdrop-filter: unset;
+  } .bullets > div:hover {
+    transition: background-color 0.05s ease;
+    background-color: rgb(254 211 30 / 55%);
+  }.bullets h3 {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  } .bullets a {
+    padding: 0.4rem 0;
+    font-size: 1.1rem;
+    transition: border-color 0.4s ease;
+  } .bullets a:hover {
+    transition: border-color 0.05s ease;
+    border-color: rgba(255,255,255, 50%);
+  } 
+
+  .megaphone {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    background-size: contain;
+    height: clamp(10rem, 28vw, 26rem);
+    z-index: 0;
+    margin-top: calc(15rem - 20vw);
+  }
+
+  .inefficiency {
+    width: clamp(20rem, 40vw, 33rem);
+    position: sticky;
+    top: calc(15rem - 10vw);
+  }
+  .text_ctnr2 p {
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
+}
+
+  .section3 .content_ctnr {
+    gap: 6vw;
+  }
+
+}
+
+@media (min-width:1920px) {
+  html {
+      font-size:20px;
+  }
+} @media (min-width:2440px) {
+  html {
+      font-size:24px;
+  }
+} @media (min-width:3000px) {
+  html {
+      font-size:32px;
+  }
+}
