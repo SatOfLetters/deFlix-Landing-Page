@@ -150,17 +150,20 @@ nav {
 .web3connect {
 
 } .cta {
-  padding: 0.6rem clamp(1.1rem, 5vw, 2rem);
+  padding: 0.9rem clamp(1.1rem, 8vw, 2.5rem);
   background-color: var(--c1);
   color: var(--dark);
   font-weight: 800;
   font-size: clamp(1rem, calc(8vw - 0.8rem), 1.1rem);
   border-radius: 0.2rem;
   text-align: center;
-  transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease, transform 2s ease;
   position: relative;
   overflow: hidden;
   display: inline-block;
+  outline: 0.15rem solid var(--c1a);
+  outline-offset: -0.35rem;
+  transform:scale(1);
 } .cta::after, .cta::before {
   content: '';
   position: absolute;
@@ -178,6 +181,9 @@ nav {
 } .cta:hover {
   background-color: var(--c1a);
   transition: background-color 0.05s ease;
+} .cta:active {
+  transform:scale(0.95);
+  transition: transform 0.05s ease;
 }
 
 
@@ -245,7 +251,6 @@ h1 {
   background-image: url(assets/ppl.jpg);
   width: 100%;
   height: 30vh;
-  margin-top: 2.5rem;
   background-size: cover;
   background-position: center top;
   mix-blend-mode: lighten;
@@ -254,19 +259,22 @@ h1 {
 }
 .section2 {
   background-color: var(--c1);
-  background-image: url(assets/logo_outline.png);
   width: 100%;
   padding: 5rem 0;
   color: var(--dark);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: auto 90%;
-  background-attachment: fixed;
 } .text_ctnr, .text_ctnr2 {
   width: clamp(13rem, 85vw, 80rem);
   font-size: clamp(1.1rem, 4.6vw, 1.3rem);
   line-height: clamp(1.6rem, 7.5vw, 2rem);
   margin:0 auto;
+} .text_ctnr > h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: clamp(2.3rem, 10vw, 2.5rem);
+  line-height: 2.8rem;
+  color: var(--darka);
+  display: block;
+  margin-bottom: 1rem;
 } .text_ctnr p {
   font-weight: 400;
   margin: 0 0 1rem 0;
@@ -277,7 +285,7 @@ h1 {
 .chair_img {
   width: clamp(13rem, 70vw, 18rem);
   object-fit: contain;
-  margin: 2rem auto 0 auto;
+  margin: 6rem auto 0 auto;
   display: block;
 }
 
@@ -303,6 +311,8 @@ h1 {
   padding: 3rem clamp(1rem, 8vw, 3rem);
   box-sizing: border-box;
   border-radius: 0.6rem;
+  box-shadow: 0 0.1rem 0.5rem 0.2rem #b84, inset 0 0.3rem 0.6rem 0.1rem #641;
+  border: 1px solid #CA6;
 } .bullets h2 {
   text-transform: uppercase;
   line-height: 1.6rem;
@@ -369,12 +379,41 @@ h1 {
 }
 
 .bgvideo {
-  position:fixed;
-  inset:0;
+  position: fixed;
+  inset: 0;
   pointer-events: none;
   user-select: none;
-  opacity: 0.015;
-  /* z-index: -1; */
+  opacity: 0.3;
+  mix-blend-mode: lighten;
+}
+
+.soon_a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+} .soon_a:hover::after {
+  opacity: 1;
+  color:var(--c1);
+  transition: opacity 0.4s ease-in, color 1s 0.5s ease;
+} .soon_a::after {
+  content: 'SOON';
+  position: absolute;
+  inset: 0;
+  margin: 0 auto;
+  display: inline-block;
+  font-weight: 400;
+  padding: 0.4rem 1rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(0.4rem);
+  letter-spacing: 0.2rem;
+  opacity: 0;
+  color:transparent;
+  transition: opacity 0.4s 0.4s ease-out, color 0.4s ease;
+  background-color: rgba(0,0,0,0.3);
 }
 
 
@@ -389,7 +428,9 @@ h1 {
 
 
 
-@media (min-width:800px) {
+
+
+@media (min-width:850px), (min-height:1000px) {
 
   h1 {
     text-align: left;
@@ -465,6 +506,14 @@ h1 {
     flex: 1;
     width: clamp(13rem, 50vw, 75rem);
   }
+  
+  .section2 {
+    background-image: url(assets/logo_outline.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto 90%;
+    background-attachment: fixed;
+  }
 
   .chair_img {
     position: sticky;
@@ -480,7 +529,8 @@ h1 {
     align-items: stretch;
   } .bullets > div {
     flex: 1;
-    min-width: 20rem;
+    min-width: 22rem;
+    max-width: 24rem;
     justify-content: space-between;
     transition: background-color 0.4s ease;
   } .bullets > div:hover {
@@ -521,7 +571,8 @@ h1 {
 }
 
   .section3 .content_ctnr {
-    gap: 9vw;
+    gap: 8vw;
+    gap: clamp(2rem, calc(20vw - 11rem), 8rem);
   }
 
 }
