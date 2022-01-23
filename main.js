@@ -1,3 +1,14 @@
+const loadingBg = document.querySelector('.loading_bg')
+
+document.onreadystatechange = function () {
+    if (document.readyState == "interactive" || document.readyState == "complete") {
+
+        loadingBg.classList.add('hidden')
+
+    }
+}
+
+
 ScrollReveal().reveal('.text_ctnr p, .bullets, .chair_img, .inefficiency', {
     duration: 800,
     easing: 'ease'
